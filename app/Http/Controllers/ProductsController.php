@@ -45,7 +45,7 @@ class ProductsController extends Controller
      */
     public function show(string $id)
     {
-        return ProductResource::collection(["data" => Product::find($id)]);
+        return ProductResource::collection([Product::find($id)]);
     }
 
     /**

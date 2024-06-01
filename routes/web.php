@@ -34,6 +34,7 @@ Route::post('/api/products/{id}', [ProductsController::class, "update"])
 Route::delete('/api/products/{id}', [ProductsController::class, "destroy"])
     ->middleware("auth:sanctum");
 
+Route::post("/api/register", [AuthenticationController::class, "register"]);
 Route::post("/api/login", [AuthenticationController::class, "login"]);
 Route::get("/api/logout", [AuthenticationController::class, "logout"])
     ->middleware("auth:sanctum");

@@ -43,7 +43,7 @@ class CategoryProductsController extends Controller
      */
     public function show(string $id)
     {
-        return CategoryProductResource::collection(CategoryProduct::find($id));
+        return CategoryProductResource::collection([CategoryProduct::find($id)]);
     }
 
     /**
